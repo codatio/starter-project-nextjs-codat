@@ -24,12 +24,17 @@ const Home = (props) => {
 
         <div className={styles.grid}>
           {
-            props.data.results.map(company => {
-              return <a key={company.id} href={`https://app.codat.io/companies/${company.id}`} target="_blank" rel="noreferrer" className={styles.card}>
-                <h2>{company.name}</h2>
-                <p>{company.id}</p>
-              </a>
-            })
+            props.data.results?.length >= 1
+              ? props.data.results.map(company => {
+                return <a key={company.id} href={`https://app.codat.io/companies/${company.id}`} target="_blank" rel="noreferrer" className={styles.card}>
+                  <h2>{company.name}</h2>
+                  <p>{company.id}</p>
+                </a>
+              })
+              : <div className={styles.card}>
+                  <h2>No companies</h2>
+                  <p>Head to <a key={company.id} href={`https://app.codat.io/companies/${company.id}`} target="_blank" rel="noreferrer">Codat's Portal</a> to add your first company</p>
+                </div>
           }
         </div>
       </main>
