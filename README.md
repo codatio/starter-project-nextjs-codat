@@ -2,6 +2,12 @@
 
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app) and example requests from [Codat](https://docs.codat.io/docs).
 
+## What is Codat?
+
+Codat is the universal API for small business data. We provide real-time connectivity to enable software providers and financial institutions to build integrated products for their small business customers.
+
+Small businesses run on many different platforms. Codat gives these platforms a standard way to connect with each other so they can move data around seamlessly at scale.
+
 ## Getting started
 
 You'll need your API key first - read our guide to [getting authorized](https://docs.codat.io/reference/authentication).
