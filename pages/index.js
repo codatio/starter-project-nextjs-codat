@@ -25,7 +25,7 @@ const Home = (props) => {
         <div className={styles.grid}>
           {
             props.data.results.map(company => {
-              return <a key={company.id} href={`https://app.codat.io/companies/${company.id}`} target="_blank" className={styles.card}>
+              return <a key={company.id} href={`https://app.codat.io/companies/${company.id}`} target="_blank" rel="noreferrer" className={styles.card}>
                 <h2>{company.name}</h2>
                 <p>{company.id}</p>
               </a>
