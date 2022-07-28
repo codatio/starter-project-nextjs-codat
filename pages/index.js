@@ -33,7 +33,7 @@ const Home = (props) => {
               })
               : <div className={styles.card}>
                   <h2>No companies</h2>
-                  <p>Head to <a key={company.id} href={`https://app.codat.io/companies`} target="_blank" rel="noreferrer">Codat's Portal</a> to add your first company</p>
+                  <p>Head to the <a key={company.id} href="https://app.codat.io/companies" target="_blank" rel="noreferrer">Codat Portal</a> to add your first company</p>
                 </div>
           }
         </div>
