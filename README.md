@@ -1,6 +1,12 @@
 # codat-nextjs-sample-project
 
+![Vercel](https://vercelbadge.vercel.app/api/mcclowes/codat-nextjs-sample-project)
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app) and example requests from [Codat](https://docs.codat.io/docs).
+
+You can see it in action here: <https://codat-nextjs-sample-project.vercel.app/>
+
+This is a quick way of getting up and running with Codat's API, but any production application should have access control and other security measures to ensure your SMB customers' data is not exposed. 
 
 ## What is Codat?
 
@@ -10,9 +16,11 @@ Small businesses run on many different platforms. Codat gives these platforms a 
 
 ## Getting started
 
+Hit `Use this template` above to clone the project and start building!
+
 You'll need your API key first - read our guide to [getting authorized](https://docs.codat.io/reference/authentication).
 
-Rename `.env.example` to `.env.local` and add your API key.
+Once you've cloned the project, rename `.env.example` to `.env.local` and add your API key.
 
 ## Running the project
 
@@ -31,6 +39,10 @@ You can start editing the page by modifying `pages/index.js`. The page auto-upda
 [API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
 
 The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+
+## Deploying the project
+
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fmcclowes%2Fcodat-nextjs-sample-project)
 
 ## Learn more about Codat
 
