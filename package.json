@@ -1,6 +1,6 @@
 {
-  "name": "codat-portal-sample-project",
-  "version": "0.1.0",
+  "name": "codat-nextjs-sample-project",
+  "version": "1.0.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
