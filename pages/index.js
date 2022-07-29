@@ -23,7 +23,8 @@ const Home = (props) => {
         </p>
 
         <p>
-          This page uses [Server-side Rendering](https://nextjs.org/docs/basic-features/pages#server-side-rendering), 
+          This page uses 
+          <a href="https://nextjs.org/docs/basic-features/pages#server-side-rendering">Server-side Rendering</a>, 
           and is rendered server side every time the page is requested.
           This ensures your Codat API key is not exposed to the user.
         </p>
