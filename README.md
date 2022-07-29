@@ -7,7 +7,7 @@
 
 This repo contains a Next.js project setup to work with [Codat](#what-is-codat).
 
-### Running Localy
+### Running locally
 
 ```bash
 git clone git@github.com:mcclowes/codat-nextjs-sample-project.git codat
