@@ -22,6 +22,12 @@ const Home = (props) => {
           <code className={styles.code}>pages/index.js</code>
         </p>
 
+        <p>
+          This page uses [Server-side Rendering](https://nextjs.org/docs/basic-features/pages#server-side-rendering), 
+          and is rendered server side every time the page is requested.
+          This ensures your Codat API key is not exposed to the user.
+        </p>
+
         <div className={styles.grid}>
           {
             props.data.results?.length >= 1
