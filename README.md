@@ -26,7 +26,7 @@ Hit the **Deploy** above to clone the project and start building!
 > You'll need your API key to initialize the project!
 > **[Get Your Key Here](https://docs.codat.io/reference/authentication).**
 
-## Next Steps
+## Next steps
 
 ### Learn more about Codat
 
