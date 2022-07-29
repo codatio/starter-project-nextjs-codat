@@ -17,14 +17,14 @@ npm run dev
 ```
 
 > You'll need your API key before making your first request!
-> **[Get Your Key Here](https://docs.codat.io/reference/authentication).**
+> **[Get your key here](https://docs.codat.io/reference/authentication).**
 
 ### Running on Vercel
 
 Hit the **Deploy** above to clone the project and start building!
 
 > You'll need your API key to initialize the project!
-> **[Get Your Key Here](https://docs.codat.io/reference/authentication).**
+> **[Get your key here](https://docs.codat.io/reference/authentication).**
 
 ## Next steps
 
