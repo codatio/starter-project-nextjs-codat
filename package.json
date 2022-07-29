@@ -2,6 +2,7 @@
   "name": "codat-nextjs-sample-project",
   "version": "1.0.0",
   "private": true,
+  "author": "Max Clayton Clowes <m.claytonclowes@codat.io>",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
