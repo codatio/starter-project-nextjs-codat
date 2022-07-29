@@ -49,4 +49,4 @@ Codat is the universal API for small business data. We provide real-time connect
 
 Small businesses run on many different platforms. Codat gives these platforms a standard way to connect with each other so they can move data around seamlessly at scale.
 
-[deploywithvercel]: https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fmcclowes%2Fcodat-nextjs-sample-project&env=CODAT_API_KEY&envDescription=Your%20Codat%20API%20Key&envLink=https%3A%2F%2Fdocs.codat.io%2Freference%2Fauthentication
+[deploywithvercel]: https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fcodatio%2Fcodat-nextjs-sample-project&env=CODAT_API_KEY&envDescription=Your%20Codat%20API%20Key&envLink=https%3A%2F%2Fdocs.codat.io%2Freference%2Fauthentication
