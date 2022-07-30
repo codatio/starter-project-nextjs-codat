@@ -1,10 +1,11 @@
 import { useState, useEffect } from 'react';
 import Head from 'next/head'
 import Image from 'next/image'
-import styles from '../styles/Home.module.css'
+import styles from '../../styles/Home.module.css'
 import Link from 'next/link'
 
-const Home = (props) => {
+const Home = ({company}) => {
+  console.log(company)
   return (
     <div className={styles.container}>
       <Head>
@@ -18,11 +19,6 @@ const Home = (props) => {
           <a href="https://nextjs.org">Next.js</a> X <a href="https://www.codat.io">Codat!</a>
         </h1>
 
-        <p className={styles.description}>
-          Get started by editing{' '}
-          <code className={styles.code}>pages/index.js</code>
-        </p>
-
         <p>
           This page uses 
           <a href="https://nextjs.org/docs/basic-features/pages#server-side-rendering">Server-side Rendering</a>, 
@@ -30,21 +26,22 @@ const Home = (props) => {
           This ensures your Codat API key is not exposed to the user.
         </p>
 
-        <h2>Companies</h2>
+        <h2>{company.name}</h2>
+        <p><i>{company.id}</i></p>
+        <p><b>Connections:</b> {company.platform}</p>
+        <p><b>Last pull:</b> {company.lastSync}</p>
+        <p><b>Created:</b> {company.created}</p>
+
+        <br/>
 
         <div className={styles.grid}>
-          {
-            props.data.results?.length >= 1
-              ? props.data.results.map(company => {
-                return <Link key={company.id} href={`/companies/${company.id}`} className={styles.card}>
-                  <p className={styles.card}>{company.name}</p>
-                </Link>
-              })
-              : <div className={styles.card}>
-                  <h2>No companies</h2>
-                  <p>Head to the <a key={company.id} href="https://app.codat.io/companies" target="_blank" rel="noreferrer">Codat Portal</a> to add your first company</p>
-                </div>
-          }
+          <a className={styles.card} href={`https://app.codat.io/companies/${company.id}`} target="_blank" rel="norefferer">
+            Explore {company.name} in the Portal →
+          </a>
+
+          <Link key={company.id} href={`/`} className={styles.card}>
+            <p className={styles.card}>← Back to Home</p>
+          </Link>
         </div>
       </main>
 
@@ -64,7 +61,9 @@ const Home = (props) => {
   )
 }
 
-export async function getServerSideProps() {
+export async function getServerSideProps(context) {
+  const companyId = context.params.id[0];
+
   // Encode your API key
   const encodedKey = Buffer.from(process.env.CODAT_API_KEY).toString(
     "base64"
@@ -80,11 +79,13 @@ export async function getServerSideProps() {
   }
 
   // Fetch data from external API
-  const res = await fetch(`https://api.codat.io/companies?page=1&pageSize=50`, headers)
+  const res = await fetch(`https://api.codat.io/companies/${companyId}`, headers)
   const data = await res.json()
 
+  console.log(data)
+
   // Pass data to the page via props
-  return { props: { data } }
+  return { props: { company: data } }
 }
 
 
