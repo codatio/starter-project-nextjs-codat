@@ -4,8 +4,7 @@ import Image from 'next/image'
 import styles from '../../styles/Home.module.css'
 import Link from 'next/link'
 
-const Home = ({company}) => {
-  console.log(company)
+const Company = ({company}) => {
   return (
     <div className={styles.container}>
       <Head>
@@ -82,11 +81,9 @@ export async function getServerSideProps(context) {
   const res = await fetch(`https://api.codat.io/companies/${companyId}`, headers)
   const data = await res.json()
 
-  console.log(data)
-
   // Pass data to the page via props
   return { props: { company: data } }
 }
 
 
-export default Home;
+export default Company;
