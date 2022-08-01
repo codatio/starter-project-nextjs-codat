@@ -49,4 +49,4 @@ Small businesses run on many different platforms. Codat gives these platforms a 
 
 ---
 
-If you've got feedback on this sample project or have ideas for other sample projects you'd like to see, raise an [Issue](https://github.com/codatio/codat-nextjs-sample-project/issues) or drop us an email [developerexperience](mailto:developer-experience@codat.io).
+If you've got feedback on this sample project or have ideas for other sample projects you'd like to see, raise an [Issue](https://github.com/codatio/codat-nextjs-sample-project/issues) or [drop us an email](mailto:developer-experience@codat.io).
