@@ -34,7 +34,7 @@ const Company = ({company}) => {
         <br/>
 
         <div className={styles.grid}>
-          <a className={styles.card} href={`https://app.codat.io/companies/${company.id}`} target="_blank" rel="norefferer">
+          <a className={styles.card} href={`https://app.codat.io/companies/${company.id}`} target="_blank" rel="noreferrer">
             Explore {company.name} in the Portal →
           </a>
 
