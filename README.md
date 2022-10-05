@@ -1,4 +1,4 @@
-# Codat NextJS Sample Project
+# Codat NextJS Starter Project
 
 ![Vercel](https://vercelbadge.vercel.app/api/mcclowes/codat-nextjs-sample-project)
 [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fcodatio%2Fcodat-nextjs-sample-project&env=CODAT_API_KEY&envDescription=Your%20Codat%20API%20Key&envLink=https%3A%2F%2Fdocs.codat.io%2Freference%2Fauthentication)
