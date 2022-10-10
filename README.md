@@ -32,7 +32,7 @@ Hit the **Deploy** above to clone the project and start building!
 
 - [Read our getting started guide for developers](https://docs.codat.io/docs/get-started-api)
 - [Read how to get authenticated](https://docs.codat.io/reference/authentication)
-- [Learn about our /comapnies endpoint](https://docs.codat.io/reference/listcompanies)
+- [Learn about our /companies endpoint](https://docs.codat.io/reference/listcompanies)
 
 ### Learn more about Next.js
 
