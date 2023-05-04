@@ -8,7 +8,7 @@ import { ListCompanyResponse } from "@codat/common/dist/sdk/models/operations";
 
 const common = new CodatCommon({
   security: {
-    authHeader: process.env.CODAT_AUTH_HEADER,
+    authHeader: process.env.CODAT_AUTH_HEADER!,
   },
 });
 

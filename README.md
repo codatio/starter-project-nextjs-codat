@@ -1,7 +1,7 @@
 # starter-project-nextjs-codat
 
-![Vercel](https://vercelbadge.vercel.app/api/codat/codat-nextjs-sample-project)
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fcodatio%2Fcodat-nextjs-sample-project&env=CODAT_API_KEY&envDescription=Your%20Codat%20API%20Key&envLink=https%3A%2F%2Fdocs.codat.io%2Freference%2Fauthentication)
+![Vercel](https://vercelbadge.vercel.app/api/codat/starter-project-nextjs-codat)
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fcodatio%2Fstarter-project-nextjs-codat&env=CODAT_API_KEY&envDescription=Your%20Codat%20API%20Key&envLink=https%3A%2F%2Fdocs.codat.io%2Freference%2Fauthentication)
 
 This project uses [Next 13 App Router](https://beta.nextjs.org/docs/getting-started) and Codat's new TypeScript SDK, which are both in Beta.
 
@@ -51,4 +51,4 @@ Small businesses run on many different platforms. Codat gives these platforms a 
 
 ---
 
-If you've got feedback on this sample project or have ideas for other sample projects you'd like to see, raise an [Issue](https://github.com/codatio/codat-nextjs-sample-project/issues) or [drop us an email](mailto:developer-experience@codat.io).
+If you've got feedback on this sample project or have ideas for other sample projects you'd like to see, raise an [Issue](https://github.com/codatio/starter-project-nextjs-codat/issues) or [drop us an email](mailto:developer-experience@codat.io).
