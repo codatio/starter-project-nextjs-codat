@@ -5,6 +5,7 @@ import styles from './page.module.css'
 
 import { CodatCommon } from "@codat/common";
 import { GetCompanyResponse } from "@codat/common/dist/sdk/models/operations";
+import { Company } from "@codat/common/dist/sdk/models";
 
 const common = new CodatCommon({
   security: {
@@ -12,7 +13,7 @@ const common = new CodatCommon({
   },
 });
 
-const getData = async (id) => {
+const getData = async (id: Company.id) => {
   const res = await common.companies
     .get({
       companyId: id,
