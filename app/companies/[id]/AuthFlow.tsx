@@ -7,19 +7,22 @@ import styles from './AuthFlow.module.css'
 import dynamic from 'next/dynamic'; // Use dynamic imports instead for NextJS
 import '@codat/link-sdk/index.css';
 
+import { Company } from '@codat/common/dist/sdk/models/shared/company';
+import { Connection } from '@codat/common/dist/sdk/models/shared/connection';
+
 const CodatLink = dynamic(
   () => import('@codat/link-sdk').then((mod) => mod.CodatLink),
   { ssr: false }
 );
 
-const AuthFlow = ({ companyId }) => {
+const AuthFlow = ({ companyId }: {companyId: Company["id"]}) => {
   const [open, setOpen] = useState(false);
   const [complete, setComplete] = useState(false)
-  const [connections, setConnections] = useState([])
+  const [connectionIds, setConnectionIds] = useState<Connection["id"][]>([])
 
   const reset = () => {
     setOpen(false);
-    setConnections([]);
+    setConnectionIds([]);
   }
 
   return (
@@ -27,8 +30,8 @@ const AuthFlow = ({ companyId }) => {
       <button onClick={() => setOpen(true)}>Connect</button>
 
       {
-        connections.length >= 1
-        ? connections.map((id, i)=><div key={i}>{id}</div>)
+        connectionIds.length >= 1
+        ? connectionIds.map((id, i)=><div key={i}>{id}</div>)
         : <div><i>No connections</i></div>
       }
 
@@ -36,13 +39,13 @@ const AuthFlow = ({ companyId }) => {
         open && <div className={styles.modal}>
             <CodatLink
               companyId={companyId}
-              onConnection={(newConnectionId) => setConnections([...connections, newConnectionId.connectionId])}
+              onConnection={(newConnection: { connectionId: Connection["id"] }) => setConnectionIds([...connectionIds, newConnection.connectionId])}
               onFinish={() => {
-                setComplete();
+                setComplete(false);
                 setOpen(false);
               }}
               onClose={() => reset()}
-              onError={(error) => {
+              onError={(error: string) => {
                 setOpen(false);
                 alert(error);
               }}

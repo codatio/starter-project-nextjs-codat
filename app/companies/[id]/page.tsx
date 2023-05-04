@@ -78,7 +78,10 @@ const CompanyPage = async ({
 
         <div className={styles.card}>
           <h2>Connect data</h2>
-          <AuthFlow companyId={company?.id}/>
+          { 
+            company?.id
+            && <AuthFlow companyId={company?.id!}/>
+          }
         </div>
       </div>
     </main>
