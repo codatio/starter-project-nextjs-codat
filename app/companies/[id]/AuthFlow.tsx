@@ -31,8 +31,11 @@ const AuthFlow = ({ companyId }: {companyId: Company["id"]}) => {
 
       {
         connectionIds.length >= 1
-        ? connectionIds.map((id, i)=><div key={i}>{id}</div>)
-        : <div><i>No connections</i></div>
+          && <div>
+            <h4>Connections just created</h4>
+
+            { connectionIds.map((id, i)=><div key={i}>{id}</div>) }
+          <div>
       }
 
       {

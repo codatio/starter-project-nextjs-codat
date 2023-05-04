@@ -9,8 +9,6 @@ import { Company } from '@codat/common/dist/sdk/models/shared/company';
 
 import AuthFlow from './AuthFlow';
 
-export const revalidate = 60;
-
 const common = new CodatCommon({
   security: {
     authHeader: process.env.CODAT_AUTH_HEADER!,
@@ -80,6 +78,7 @@ const CompanyPage = async ({
 
         <div className={styles.card}>
           <h2>Connect data</h2>
+          
           { 
             company?.id
             && <AuthFlow companyId={company?.id!}/>
