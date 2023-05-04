@@ -1,8 +1,7 @@
 {
-  "name": "codat-nextjs-sample-project",
-  "version": "1.0.0",
+  "name": "starter-project-nextjs-codat",
+  "version": "1.1.0",
   "private": true,
-  "author": "Max Clayton Clowes <m.claytonclowes@codat.io>",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -10,13 +9,14 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "cors": "^2.8.5",
-    "next": "12.2.3",
+    "@codat/accounting": "^0.12.2",
+    "@codat/common": "^0.12.2",
+    "@types/node": "18.16.3",
+    "@types/react": "18.2.5",
+    "@types/react-dom": "18.2.3",
+    "next": "13.3.4",
     "react": "18.2.0",
-    "react-dom": "18.2.0"
-  },
-  "devDependencies": {
-    "eslint": "8.20.0",
-    "eslint-config-next": "12.2.3"
+    "react-dom": "18.2.0",
+    "typescript": "5.0.4"
   }
 }
