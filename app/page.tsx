@@ -4,7 +4,7 @@ import Link from 'next/link';
 import styles from './page.module.css'
 
 import { CodatCommon } from "@codat/common";
-import { ListCompanyResponse } from "@codat/common/dist/sdk/models/operations";
+import { ListCompaniesResponse } from "@codat/common/dist/sdk/models/operations";
 
 const common = new CodatCommon({
   security: {
@@ -29,7 +29,7 @@ const getData = async () => {
   return res.companies;
 }
 
-const Home = async (props) => {
+const Home = async () => {
   const companies = await getData();
 
   return (
@@ -69,8 +69,8 @@ const Home = async (props) => {
 
       <div className={styles.grid}>
         {
-          companies?.results?.length >= 1
-            ? companies?.results.map(company => {
+          companies?.results?.length! >= 1
+            ? companies?.results?.map(company => {
               return <Link key={company.id} href={`/companies/${company.id}`} className={styles.card}>
                 <h4>
                   {company.name} <span>-&gt;</span>

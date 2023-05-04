@@ -13,7 +13,7 @@ const common = new CodatCommon({
   },
 });
 
-const getData = async (id: Company.id) => {
+const getData = async (id: Company["id"]) => {
   const res = await common.companies
     .get({
       companyId: id,
@@ -26,11 +26,15 @@ const getData = async (id: Company.id) => {
       throw new Error("Company not found")
     });
 
-  return res?.company;
+  return res.company;
 }
 
-const Company = async (props) => {
-  const company = await getData(props.params?.id);
+const CompanyPage = async ({
+  params,
+}: {
+  params: { id: string };
+}) => {
+  const company = await getData(params.id);
 
   return (
     <main className={styles.main}>
@@ -51,23 +55,23 @@ const Company = async (props) => {
       </div>
 
       <div className={styles.grid}>
-        <Link key={company.id} href={`/`} className={styles.card}>
+        <Link key={company?.id} href={`/`} className={styles.card}>
           <p>← Back to Home</p>
         </Link>
 
         <div className={styles.card}>
-          <h2>{company.name}</h2>
-          <p><i>{company.id}</i></p>
-          <p><b>Connections:</b> {company.platform}</p>
-          <p><b>Last pull:</b> {company.lastSync}</p>
-          <p><b>Created:</b> {company.created}</p>
+          <h2>{company?.name}</h2>
+          <p><i>{company?.id}</i></p>
+          <p><b>Connections:</b> {company?.platform}</p>
+          <p><b>Last pull:</b> {company?.lastSync}</p>
+          <p><b>Created:</b> {company?.created}</p>
         </div>
-        <a className={styles.card} href={`https://app.codat.io/companies/${company.id}`} target="_blank" rel="noreferrer">
-          Explore {company.name} in the Portal →
+        <a className={styles.card} href={`https://app.codat.io/companies/${company?.id}`} target="_blank" rel="noreferrer">
+          Explore {company?.name} in the Portal →
         </a>
       </div>
     </main>
   )
 }
 
-export default Company;
+export default CompanyPage;
