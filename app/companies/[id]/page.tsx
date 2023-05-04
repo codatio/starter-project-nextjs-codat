@@ -3,9 +3,11 @@ import Link from 'next/link';
 
 import styles from './page.module.css'
 
-import { CodatCommon } from "@codat/common";
-import { GetCompanyResponse } from "@codat/common/dist/sdk/models/operations";
-import { Company } from "@codat/common/dist/sdk/models/shared/company";
+import { CodatCommon } from '@codat/common';
+import { GetCompanyResponse } from '@codat/common/dist/sdk/models/operations';
+import { Company } from '@codat/common/dist/sdk/models/shared/company';
+
+import AuthFlow from './AuthFlow';
 
 const common = new CodatCommon({
   security: {
@@ -66,9 +68,18 @@ const CompanyPage = async ({
           <p><b>Last pull:</b> {company?.lastSync}</p>
           <p><b>Created:</b> {company?.created}</p>
         </div>
-        <a className={styles.card} href={`https://app.codat.io/companies/${company?.id}`} target="_blank" rel="noreferrer">
-          Explore {company?.name} in the Portal →
-        </a>
+
+        <div className={styles.card}>
+          <h2>View in the Portal</h2>
+          <a href={`https://app.codat.io/companies/${company?.id}`} target="_blank" rel="noreferrer">
+            Explore {company?.name} in the Portal →
+          </a>
+        </div>
+
+        <div className={styles.card}>
+          <h2>Connect data</h2>
+          <AuthFlow companyId={company?.id}/>
+        </div>
       </div>
     </main>
   )
