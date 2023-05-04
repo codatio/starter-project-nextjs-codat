@@ -10,6 +10,8 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@codat/accounting": "^0.12.2",
+    "@codat/common": "^0.12.2",
     "cors": "^2.8.5",
     "next": "12.2.3",
     "react": "18.2.0",
