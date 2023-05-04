@@ -9,6 +9,8 @@ import { Company } from '@codat/common/dist/sdk/models/shared/company';
 
 import AuthFlow from './AuthFlow';
 
+export const revalidate = 60;
+
 const common = new CodatCommon({
   security: {
     authHeader: process.env.CODAT_AUTH_HEADER!,

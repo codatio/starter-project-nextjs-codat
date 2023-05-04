@@ -86,6 +86,7 @@
   width: 480px;
   height: 360px;
   margin-left: -400px;
+  z-index: -1;
 }
 
 .center::after {
@@ -102,11 +103,18 @@
   position: absolute;
   filter: blur(45px);
   transform: translateZ(0);
+  z-index: -1;
 }
 
 .logo {
   position: relative;
 }
+
+.hr {
+  width: 50px;
+  margin: 2em;
+}
+
 /* Enable hover only on non-touch devices */
 @media (hover: hover) and (pointer: fine) {
   .card:hover {

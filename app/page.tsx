@@ -6,6 +6,8 @@ import styles from './page.module.css'
 import { CodatCommon } from "@codat/common";
 import { ListCompaniesResponse } from "@codat/common/dist/sdk/models/operations";
 
+export const revalidate = 60;
+
 const common = new CodatCommon({
   security: {
     authHeader: process.env.CODAT_AUTH_HEADER!,
@@ -84,7 +86,7 @@ const Home = async () => {
         }
       </div>
 
-      <hr/>
+      <hr className={styles.hr}/>
 
       <div className={styles.grid}>
         <a
