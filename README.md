@@ -5,6 +5,16 @@
 
 This project uses [Next 13 App Router](https://beta.nextjs.org/docs/getting-started) and Codat's new TypeScript SDK, which are both in Beta.
 
+## Features
+
+- Extends the [create-next-app](https://nextjs.org/docs/getting-started/installation) default
+- Comes with our [TypeScript SDK](https://github.com/codatio/client-sdk-typescript)
+- Add your API key and pull your companies
+- Authorize companies with [Embedded Link SDK](https://docs.codat.io/auth-flow/authorize-embedded-link)
+- Auto-deploy to go live on Vercel instantly
+
+---
+
 ## Getting started
 
 This repo contains a Next.js project setup to work with [Codat](#what-is-codat).
