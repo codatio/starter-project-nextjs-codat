@@ -26,7 +26,7 @@ const AuthFlow = ({ companyId }: {companyId: Company["id"]}) => {
   }
 
   return (
-    <>
+    <div>
       <button onClick={() => setOpen(true)}>Connect</button>
 
       {
@@ -55,7 +55,7 @@ const AuthFlow = ({ companyId }: {companyId: Company["id"]}) => {
             />
           </div>
       }
-    </>
+    </div>
   );
 };
 
