@@ -7,6 +7,10 @@ import styles from './AuthFlow.module.css'
 import { Company } from '@codat/common/dist/sdk/models/shared/company';
 import { Connection } from '@codat/common/dist/sdk/models/shared/connection';
 
+import {
+  ErrorCallbackArgs,
+} from "https://link-sdk.codat.io";
+
 import CodatLink from './CodatLink';
 
 const AuthFlow = ({ companyId }: {companyId: Company["id"]}) => {
