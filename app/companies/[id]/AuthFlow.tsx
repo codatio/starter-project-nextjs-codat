@@ -4,16 +4,14 @@ import { useState } from 'react';
 
 import styles from './AuthFlow.module.css'
 
-import dynamic from 'next/dynamic'; // Use dynamic imports instead for NextJS
-import '@codat/link-sdk/index.css';
-
 import { Company } from '@codat/common/dist/sdk/models/shared/company';
 import { Connection } from '@codat/common/dist/sdk/models/shared/connection';
 
-const CodatLink = dynamic(
-  () => import('@codat/link-sdk').then((mod) => mod.CodatLink),
-  { ssr: false }
-);
+import {
+  ErrorCallbackArgs,
+} from "https://link-sdk.codat.io";
+
+import CodatLink from './CodatLink';
 
 const AuthFlow = ({ companyId }: {companyId: Company["id"]}) => {
   const [open, setOpen] = useState(false);
@@ -30,12 +28,12 @@ const AuthFlow = ({ companyId }: {companyId: Company["id"]}) => {
       <button onClick={() => setOpen(true)}>Connect</button>
 
       {
-        connectionIds.length >= 1
+        connectionIds?.length >= 1
           && <div>
             <h4>Connections just created</h4>
 
             { connectionIds.map((id, i)=><div key={i}>{id}</div>) }
-          <div>
+            </div>
       }
 
       {
@@ -48,7 +46,7 @@ const AuthFlow = ({ companyId }: {companyId: Company["id"]}) => {
                 setOpen(false);
               }}
               onClose={() => reset()}
-              onError={(error: string) => {
+              onError={(error: ErrorCallbackArgs) => {
                 setOpen(false);
                 alert(error);
               }}

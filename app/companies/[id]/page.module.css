@@ -18,14 +18,14 @@
   font-family: var(--font-mono);
 }
 
-.description a {
+.description > a {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 0.5rem;
 }
 
-.description p {
+.description > p {
   position: relative;
   margin: 0;
   padding: 1rem;
@@ -54,17 +54,17 @@
   transition: background 200ms, border 200ms;
 }
 
-.card span {
+.card > span {
   display: inline-block;
   transition: transform 200ms;
 }
 
-.card h2 {
+.card > h2 {
   font-weight: 600;
   margin-bottom: 0.7rem;
 }
 
-.card p {
+.card > p {
   margin: 0;
   opacity: 0.6;
   font-size: 0.9rem;
@@ -114,13 +114,13 @@
     border: 1px solid rgba(var(--card-border-rgb), 0.15);
   }
 
-  .card:hover span {
+  .card:hover > span {
     transform: translateX(4px);
   }
 }
 
 @media (prefers-reduced-motion) {
-  .card:hover span {
+  .card:hover > span {
     transform: none;
   }
 }
@@ -142,7 +142,7 @@
     padding: 1rem 2.5rem;
   }
 
-  .card h2 {
+  .card > h2 {
     margin-bottom: 0.5rem;
   }
 
@@ -159,12 +159,12 @@
     font-size: 0.8rem;
   }
 
-  .description a {
+  .description > a {
     padding: 1rem;
   }
 
-  .description p,
-  .description div {
+  .description > p,
+  .description > div {
     display: flex;
     justify-content: center;
     position: fixed;
@@ -187,7 +187,7 @@
     backdrop-filter: blur(24px);
   }
 
-  .description div {
+  .description > div {
     align-items: flex-end;
     pointer-events: none;
     inset: auto 0 0;
