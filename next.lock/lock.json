@@ -1,6 +1,8 @@
 {
   "https://link-sdk.codat.io/": "no-cache",
   "https://link-sdk.codat.io/emotion.5a0ab54a.mjs": { "integrity": "sha512-JnXlQfqP43li4s7JZuN/qIt2VOO/R62IWWpkx+2zJr4il8fA/fn66VkKNhdt/9J9fdDjTawvOs+73da4uUjk0w==", "contentType": "application/javascript" },
+  "https://link-sdk.codat.io/emotion.c2af8239.mjs": { "integrity": "sha512-5xw1v+nlg51EdPxnp/ampl1iNB9gVz8GcYkvYSc3rf4uZmpi8468IjFVEFWMzhQX6ZatnjstUUBDAR/sWxx4xg==", "contentType": "application/javascript" },
+  "https://link-sdk.codat.io/link-sdk.3e1c8ced.mjs": { "integrity": "sha512-P1cbjTusfnQ1wU+ROnJe8hNDtHx8vKfJ8Agmshud1cNHYLyURFw6tdN/C512X8jiDkh1cxUxaHgKQZKXgczHYA==", "contentType": "application/javascript" },
   "https://link-sdk.codat.io/link-sdk.72501bb9.mjs": { "integrity": "sha512-mpGWzOe4uS8qv3vi8AVsESNdOGBeDn6DzjtWFN2ii9mVP50JRkXuv1r1rZy6e3OrzidCvGMGQLcwMmx2BsORHg==", "contentType": "application/javascript" },
   "https://link-sdk.codat.io/vendor.0c2a39e9.mjs": { "integrity": "sha512-isPNO4nPF6MOTf9t0edtRhGZsohK0M+X4XgXp5YTAfa4yf1GHzROxTHLfyQUXEf7OUC3mwAiCmOPKebGQ+y1Bg==", "contentType": "application/javascript" },
   "version": 1
