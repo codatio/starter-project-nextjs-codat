@@ -48,7 +48,7 @@ const AuthFlow = ({ companyId }: {companyId: Company["id"]}) => {
               onClose={() => reset()}
               onError={(error: ErrorCallbackArgs) => {
                 setOpen(false);
-                alert(error);
+                alert(error.message);
               }}
             />
           </div>
