@@ -2,7 +2,7 @@
 const nextConfig = {
   experimental: {
     appDir: true,
-    urlImports: [ 'https://link-sdk.codat.io' ],
+    serverActions: true,
   },
 }
 

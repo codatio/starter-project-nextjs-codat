@@ -9,13 +9,15 @@ import { Company } from '@codat/common/dist/sdk/models/shared/company';
 
 import AuthFlow from './AuthFlow';
 
-const common = new CodatCommon({
-  security: {
-    authHeader: process.env.CODAT_AUTH_HEADER!,
-  },
-});
-
 const getData = async (id: Company["id"]) => {
+  'use server'
+
+  const common = new CodatCommon({
+    security: {
+      authHeader: process.env.CODAT_AUTH_HEADER!,
+    },
+  });
+
   const res = await common.companies
     .get({
       companyId: id,

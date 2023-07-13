@@ -8,13 +8,15 @@ import { ListCompaniesResponse } from "@codat/common/dist/sdk/models/operations"
 
 export const revalidate = 60;
 
-const common = new CodatCommon({
-  security: {
-    authHeader: process.env.CODAT_AUTH_HEADER!,
-  },
-});
-
 const getData = async () => {
+  'use server'
+  
+  const common = new CodatCommon({
+    security: {
+      authHeader: process.env.CODAT_AUTH_HEADER!,
+    },
+  });
+  
   const res = await common.companies
     .list({
       page: 1,
